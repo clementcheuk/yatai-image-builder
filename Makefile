@@ -9,7 +9,7 @@ ifndef VERSION
 	VERSION := $(shell git describe --tags `git rev-list --tags --max-count=1` | sed 's/v\(\)/\1/')
 endif
 
-PKG := github.com/bentoml/yatai-image-builder
+PKG := github.com/clementcheuk/yatai-image-builder
 VERSION_BUILDFLAGS := -X '$(PKG)/version.GitCommit=$(GIT_COMMIT)' -X '$(PKG)/version.Version=$(VERSION)' -X '$(PKG)/version.BuildDate=$(BUILD_DATE)'
 
 # CHANNELS define the bundle channels used in the bundle.

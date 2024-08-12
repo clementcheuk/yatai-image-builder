@@ -1,4 +1,4 @@
-module github.com/bentoml/yatai-image-builder
+module github.com/clementcheuk/yatai-image-builder
 
 go 1.18
 
@@ -6,6 +6,7 @@ require (
 	github.com/apparentlymart/go-shquot v0.0.1
 	github.com/aws/aws-sdk-go v1.44.152
 	github.com/bentoml/yatai-common v0.0.0-20240603095308-e19a9540dc30
+	github.com/bentoml/yatai-image-builder v1.1.1-0.20230108162700-337f26f7f704
 	github.com/bentoml/yatai-schemas v0.0.0-20230418023541-71c74442a90f
 	github.com/huandu/xstrings v1.3.2
 	github.com/iancoleman/strcase v0.2.0
@@ -28,7 +29,6 @@ require (
 	github.com/bentoml/yatai-deployment v1.1.10 // indirect
 	github.com/docker/distribution v2.7.1+incompatible // indirect
 	github.com/docker/libtrust v0.0.0-20150114040149-fa567046d9b1 // indirect
-	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/image-spec v1.0.2 // indirect
