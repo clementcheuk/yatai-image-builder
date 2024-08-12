@@ -1761,7 +1761,7 @@ url="{{.ModelDownloadURL}}"
 echo "Downloading model {{.ModelRepositoryName}}:{{.ModelVersion}} to /tmp/downloaded.tar..."
 if [[ ${url} == s3://* ]]; then
 	echo "Downloading from s3..."
-	aws s3 cp ${url} /tmp/downloaded.tar
+	aws --endpoint-url https://minio-api.arviztech.com s3 cp ${url} /tmp/downloaded.tar
 elif [[ ${url} == gs://* ]]; then
     echo "Downloading from GCS..."
     gsutil cp ${url} /tmp/downloaded.tar
@@ -2136,7 +2136,7 @@ url="{{.BentoDownloadURL}}"
 echo "Downloading bento {{.BentoRepositoryName}}:{{.BentoVersion}} to /tmp/downloaded.tar..."
 if [[ ${url} == s3://* ]]; then
 	echo "Downloading from s3..."
-	aws s3 cp ${url} /tmp/downloaded.tar
+	aws --endpoint-url https://minio-api.arviztech.com s3 cp ${url} /tmp/downloaded.tar
 elif [[ ${url} == gs://* ]]; then
 	echo "Downloading from GCS..."
 	gsutil cp ${url} /tmp/downloaded.tar
@@ -2391,7 +2391,7 @@ url="{{.ModelDownloadURL}}"
 echo "Downloading model {{.ModelRepositoryName}}:{{.ModelVersion}} to /tmp/downloaded.tar..."
 if [[ ${url} == s3://* ]]; then
 	echo "Downloading from s3..."
-	aws --endpoint-url https://minio-api.arviztech.com  s3 cp ${url} /tmp/downloaded.tar
+	aws --endpoint-url https://minio-api.arviztech.com s3 cp ${url} /tmp/downloaded.tar
 elif [[ ${url} == gs://* ]]; then
 	echo "Downloading from GCS..."
 	gsutil cp ${url} /tmp/downloaded.tar
